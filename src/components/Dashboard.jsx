@@ -403,7 +403,7 @@ const Dashboard = () => {
             <div className="bg-[#FBEEDE]/50 rounded-3xl p-2  mb-8 border-2 border-[#B99C66] relative">
               <div className="p-4">
                 <h2 className="text-xl font-semibold text-slate-800 mb-4">
-                  {firstName} Share Your Diwali Wishes
+                  {firstName}, Share Your Diwali Wishes
                 </h2>
 
                 <div className="relative">
@@ -493,7 +493,7 @@ const Dashboard = () => {
                         : "bg-[#B99C66] text-white opacity-50 cursor-not-allowed"
                     }`}
                   >
-                    {feedbackSubmitted ? "Submitted!" : "Submit Feedback "}
+                    {feedbackSubmitted ? "Sent!" : "Send Wishes"}
                   </button>
                 </div>
               </div>
