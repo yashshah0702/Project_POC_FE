@@ -119,12 +119,17 @@ const Dashboard = () => {
     const reader = new FileReader();
     reader.onloadend = () => setFileBase64(reader.result);
     reader.readAsDataURL(selectedFile);
+
+    e.target.value = "";
   };
 
   const handleRemoveFile = () => {
     setFile(null);
     setFileBase64("");
     setFileType("");
+
+    const fileInput = document.getElementById("feedback-file");
+    if (fileInput) fileInput.value = "";
   };
 
   const handleFeedbackSubmit = async () => {
