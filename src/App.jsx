@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import { useIsAuthenticated } from "@azure/msal-react";
 import Dashboard from "./components/Dashboard";
 import Login from "./components/Login";
@@ -9,7 +14,8 @@ const ProtectedRoute = ({ children }) => {
   const isAuthenticated = useIsAuthenticated();
 
   if (!isAuthenticated) {
-    return <Navigate to="/login" replace />;
+    // return <Navigate to="/login" replace />;
+    return <Navigate to="/" replace />;
   }
 
   return children;
@@ -23,9 +29,17 @@ function App() {
       <div className="App">
         <Routes>
           {/* Login Route - only accessible when not authenticated */}
-          <Route
+          {/* <Route
             path="/login"
-            element={isAuthenticated ? <Navigate to="/dashboard" replace /> : <Login />}
+            element={
+              isAuthenticated ? <Navigate to="/dashboard" replace /> : <Login />
+            }
+          /> */}
+          <Route
+            path="/"
+            element={
+              isAuthenticated ? <Navigate to="/dashboard" replace /> : <Login />
+            }
           />
 
           {/* Protected Dashboard Route */}
@@ -45,7 +59,8 @@ function App() {
               isAuthenticated ? (
                 <Navigate to="/dashboard" replace />
               ) : (
-                <Navigate to="/login" replace />
+                // <Navigate to="/login" replace />
+                <Navigate to="/" replace />
               )
             }
           />
@@ -57,7 +72,8 @@ function App() {
               isAuthenticated ? (
                 <Navigate to="/dashboard" replace />
               ) : (
-                <Navigate to="/login" replace />
+                // <Navigate to="/login" replace />
+                <Navigate to="/" replace />
               )
             }
           />
