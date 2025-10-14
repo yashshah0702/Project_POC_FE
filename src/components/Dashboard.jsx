@@ -311,7 +311,7 @@ const Dashboard = () => {
                   </p>
 
                   <p className="font-semibold italic text-orange-800 mb-3">
-                    atQor Wali Diwali, unwrap joy in every jar.
+                    atQor wali Diwali, unwrap joy in every jar.
                   </p>
 
                   <p className="text-gray-600 italic">
@@ -403,7 +403,7 @@ const Dashboard = () => {
             <div className="bg-[#FBEEDE]/50 rounded-3xl p-2  mb-8 border-2 border-[#B99C66] relative">
               <div className="p-4">
                 <h2 className="text-xl font-semibold text-slate-800 mb-4">
-                  {firstName}, Share Your Diwali Wishes
+                  {firstName}, share your diwali wishes
                 </h2>
 
                 <div className="relative">
