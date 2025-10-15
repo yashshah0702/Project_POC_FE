@@ -232,7 +232,7 @@ const Dashboard = () => {
       {/* ✅ Header */}
       <div>
         <header className="max-w-[57rem] mx-auto relative w-full h-[130px] sm:h-[200px] md:h-[280px] flex flex-col item-center sm:items-start justify-start sm:justify-center text-center px-4 sm:px-7 md:px-4 pt-4 md:pt-6">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-3 sm:mb-4">
             {/* <img
               src={atqorLogo}
               alt="atQor Logo"
@@ -251,7 +251,7 @@ const Dashboard = () => {
           </p>
         </header>
 
-        <main className="relative pb-16 pt-0 sm:pt-4 md:pt-6">
+        <main className="relative pb-16 pt-4 sm:pt-4 md:pt-6">
           <div className="max-w-[60rem] mx-auto px-4 sm:px-6  lg:px-8 pb-8">
             {/* ✅ Diwali Message Section */}
             <div className="bg-[#FBEEDE]/70 rounded-3xl p-4 mb-4 border-2 border-[#B99C66]">
