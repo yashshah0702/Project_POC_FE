@@ -6,7 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 // ✅ Import images
-import bgImage from "../assets/bg-image.jpg";
+import bgImage from "../assets/bg-image.png";
 import mobileBg from "../assets/mobile-bg-image.png";
 import ipadBg from "../assets/ipad-bg-image.png";
 import ipadBigBg from "../assets/ipad-bg-image1.png";
@@ -180,8 +180,8 @@ const Dashboard = () => {
         className="absolute inset-0 z-0 sm:hidden"
         style={{
           backgroundImage: `url(${mobileBg})`,
-          backgroundSize: "100% 100%",
-          backgroundPosition: "left top",
+          backgroundSize: "cover",
+          backgroundPosition: "right top",
           backgroundRepeat: "no-repeat",
           backgroundColor: "#f8fafc",
           opacity: 0.9,
@@ -194,7 +194,7 @@ const Dashboard = () => {
         style={{
           backgroundImage: `url(${ipadBg})`,
           backgroundSize: "cover",
-          backgroundPosition: "left top",
+          backgroundPosition: "right top",
           backgroundRepeat: "no-repeat",
           backgroundColor: "#f8fafc",
           opacity: 0.9,
@@ -205,7 +205,7 @@ const Dashboard = () => {
       <div
         className="absolute inset-0 z-0 hidden md:block lg:hidden"
         style={{
-          backgroundImage: `url(${ipadBigBg})`,
+          backgroundImage: `url(${ipadBg})`,
           backgroundSize: "cover",
           backgroundPosition: "left top",
           backgroundRepeat: "no-repeat",
@@ -219,7 +219,7 @@ const Dashboard = () => {
         className="absolute inset-0 z-0 hidden lg:block"
         style={{
           backgroundImage: `url(${bgImage})`,
-          backgroundSize: "100% 100%",
+          backgroundSize: "cover",
           backgroundPosition: "left top",
           backgroundRepeat: "no-repeat",
           backgroundColor: "#f8fafc",
@@ -231,8 +231,8 @@ const Dashboard = () => {
 
       {/* ✅ Header */}
       <div>
-        <header className="max-w-[57rem] mx-auto relative w-full h-[130px] sm:h-[200px] md:h-[280px] flex flex-col item-center sm:items-start justify-start sm:justify-center text-center px-4 sm:px-7 md:px-4 pt-4 md:pt-6">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-3 sm:mb-4">
+        <header className="max-w-[57rem] mx-auto relative w-full h-[150px] sm:h-[240px] md:h-[300px] flex flex-col item-center sm:items-start justify-start sm:justify-center text-center px-4 sm:px-7 md:px-4 pt-4 md:pt-18">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4">
             {/* <img
               src={atqorLogo}
               alt="atQor Logo"
@@ -251,7 +251,7 @@ const Dashboard = () => {
           </p>
         </header>
 
-        <main className="relative pb-16 pt-4 sm:pt-4 md:pt-6">
+        <main className="relative pb-4 sm:pb-16 pt-0 sm:pt-4 md:pt-19">
           <div className="max-w-[60rem] mx-auto px-4 sm:px-6  lg:px-8 pb-8">
             {/* ✅ Diwali Message Section */}
             <div className="bg-[#FBEEDE]/70 rounded-3xl p-4 mb-4 border-2 border-[#B99C66]">
@@ -263,7 +263,7 @@ const Dashboard = () => {
                 <p className="text-gray-700 leading-relaxed">
                   This festive season, as we celebrate light, warmth, and new
                   beginnings, we pause to honor the strength, resilience, and
-                  unity that you—and your family—bring to atQor. Every milestone
+                  unity that you and your family bring to atQor. Every milestone
                   we’ve achieved is a reflection of your dedication and the
                   unwavering support of those who stand beside you.
                 </p>
@@ -279,7 +279,7 @@ const Dashboard = () => {
                 <ul>
                   <li className=" list-inside marker:text-orange-800 text-gray-700">
                     <strong className="font-semibold italic text-orange-800">
-                      The Peacock-Themed Box –
+                      The Peacock-Themed Box -
                     </strong>{" "}
                     A symbol of pride, beauty, and growth. Just as the peacock
                     radiates vibrance, atQor thrives on diversity and
@@ -287,30 +287,30 @@ const Dashboard = () => {
                   </li>
                   <li className=" list-inside marker:text-orange-800 text-gray-700">
                     <strong className="font-semibold italic text-orange-800">
-                      The Brass Bell with Wooden Handle –
+                      The Brass Bell with Wooden Handle -
                     </strong>{" "}
                     Resonating clarity and harmony, reminding us of the rhythm
                     and unity that drive our success.
                   </li>
                   <li className=" list-inside marker:text-orange-800 text-gray-700">
                     <strong className="font-semibold italic text-orange-800">
-                      The Incense Stick Holder –
+                      The Incense Stick Holder -
                     </strong>{" "}
                     Representing calmness and focus, echoing the mindfulness
                     that shapes our culture.
                   </li>
                   <li className=" list-inside marker:text-orange-800 text-gray-700">
                     <strong className="font-semibold italic text-orange-800">
-                      The Scented Candle –
+                      The Scented Candle -
                     </strong>{" "}
                     A beacon of light and warmth, symbolizing hope and
                     positivity in every endeavor.
                   </li>
                   <li className=" list-inside marker:text-orange-800 text-gray-700">
                     <strong className="font-semibold italic text-orange-800">
-                      Premium Dry Fruits –
+                      Premium Dry Fruits -
                     </strong>{" "}
-                    Signifying health, energy, and prosperity—the foundation of
+                    Signifying health, energy, and prosperity the foundation of
                     a thriving future.
                   </li>
                 </ul>
@@ -320,7 +320,7 @@ const Dashboard = () => {
                     Every item is{" "}
                     <strong className="font-semibold">locally sourced</strong>,
                     crafted by skilled artisans, and designed with eco-conscious
-                    values—because growth must be sustainable and inclusive.
+                    values because growth must be sustainable and inclusive.
                   </p>
                   {/* <p>
                     From brass bell essentials to scented candles and premium
@@ -364,7 +364,7 @@ const Dashboard = () => {
                 </div>
 
                 {/* ✅ Signature */}
-                <div className=" border-t border-gray-200">
+                <div className=" ">
                   <p className="text-gray-700 mb-4">
                     With gratitude and pride,
                   </p>
