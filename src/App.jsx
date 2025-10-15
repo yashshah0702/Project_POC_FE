@@ -14,8 +14,8 @@ const ProtectedRoute = ({ children }) => {
   const isAuthenticated = useIsAuthenticated();
 
   if (!isAuthenticated) {
-    // return <Navigate to="/login" replace />;
-    return <Navigate to="/" replace />;
+    return <Navigate to="/login" replace />;
+    // return <Navigate to="/" replace />;
   }
 
   return children;
@@ -29,22 +29,23 @@ function App() {
       <div className="App">
         <Routes>
           {/* Login Route - only accessible when not authenticated */}
-          {/* <Route
+          <Route
             path="/login"
             element={
               isAuthenticated ? <Navigate to="/dashboard" replace /> : <Login />
             }
-          /> */}
-          <Route
+          />
+          {/* <Route
             path="/"
             element={
               isAuthenticated ? <Navigate to="/dashboard" replace /> : <Login />
             }
-          />
+          /> */}
 
           {/* Protected Dashboard Route */}
           <Route
-            path="/dashboard"
+            // path="/dashboard"
+            path="/"
             element={
               <ProtectedRoute>
                 <Dashboard />
@@ -57,10 +58,11 @@ function App() {
             path="/"
             element={
               isAuthenticated ? (
-                <Navigate to="/dashboard" replace />
-              ) : (
-                // <Navigate to="/login" replace />
+                // <Navigate to="/dashboard" replace />
                 <Navigate to="/" replace />
+              ) : (
+                <Navigate to="/login" replace />
+                // <Navigate to="/" replace />
               )
             }
           />
@@ -70,10 +72,11 @@ function App() {
             path="*"
             element={
               isAuthenticated ? (
-                <Navigate to="/dashboard" replace />
-              ) : (
-                // <Navigate to="/login" replace />
+                // <Navigate to="/dashboard" replace />
                 <Navigate to="/" replace />
+              ) : (
+                <Navigate to="/login" replace />
+                // <Navigate to="/" replace />
               )
             }
           />
