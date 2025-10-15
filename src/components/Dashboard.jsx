@@ -180,7 +180,7 @@ const Dashboard = () => {
         className="absolute inset-0 z-0 sm:hidden"
         style={{
           backgroundImage: `url(${mobileBg})`,
-          backgroundSize: "cover",
+          backgroundSize: "100% 100%",
           backgroundPosition: "left top",
           backgroundRepeat: "no-repeat",
           backgroundColor: "#f8fafc",
@@ -219,7 +219,7 @@ const Dashboard = () => {
         className="absolute inset-0 z-0 hidden lg:block"
         style={{
           backgroundImage: `url(${bgImage})`,
-          backgroundSize: "cover",
+          backgroundSize: "100% 100%",
           backgroundPosition: "left top",
           backgroundRepeat: "no-repeat",
           backgroundColor: "#f8fafc",
@@ -231,15 +231,16 @@ const Dashboard = () => {
 
       {/* ✅ Header */}
       <div>
-        <header className="max-w-[57rem] mx-auto relative w-full h-[190px] sm:h-[230px] md:h-[300px] flex flex-col item-center sm:items-start justify-start sm:justify-center text-center px-4 sm:px-7 md:px-4 pt-4 md:pt-24">
+        <header className="max-w-[57rem] mx-auto relative w-full h-[150px] sm:h-[200px] md:h-[280px] flex flex-col item-center sm:items-start justify-start sm:justify-center text-center px-4 sm:px-7 md:px-4 pt-4 md:pt-24">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4">
-            <img
+            {/* <img
               src={atqorLogo}
               alt="atQor Logo"
               className=" h-5 sm:h-7 md:h-12 "
-            />
+            /> */}
             <h1 className="text-2xl sm:text-3xl  md:text-5xl  font-bold text-[#000000]">
-              Wali Diwali <span className="text-[#000000]">@2025</span>
+              #atQorWaliDiwali
+              {/* <span className="text-[#000000]">@2025</span> */}
             </h1>
           </div>
           <p className="text-lg font-semibold text-gray-900">
@@ -252,32 +253,73 @@ const Dashboard = () => {
             {/* ✅ Diwali Message Section */}
             <div className="bg-[#FBEEDE]/70 rounded-3xl p-4 mb-4 border-2 border-[#B99C66]">
               <div className="space-y-6">
-                <h2 className="text-xl font-bold text-gray-800 mb-6">
+                <h2 className="text-xl font-semibold text-gray-800 mb-6">
                   Dear {firstName},
                 </h2>
 
                 <p className="text-gray-700 leading-relaxed">
-                  This Diwali, as we celebrate light, warmth, and new
-                  beginnings, we want to recognize the strength, resilience, and
-                  unity that you — and your family — bring to atQor.
+                  This festive season, as we celebrate light, warmth, and new
+                  beginnings, we pause to honor the strength, resilience, and
+                  unity that you—and your family—bring to atQor. Every milestone
+                  we’ve achieved is a reflection of your dedication and the
+                  unwavering support of those who stand beside you.
                 </p>
 
                 <h3 className="font-semibold italic text-orange-800 mb-3">
                   Crafted with Heart, Rooted in India
                 </h3>
                 <p className="text-gray-700">
-                  This Diwali, we go beyond gifting — we create experiences that
-                  connect hearts, celebrate traditions, and strengthen
-                  relationships.
+                  This year’s gift is more than a gesture it’s a story of care,
+                  sustainability, and shared values. Each element in your hamper
+                  has been thoughtfully chosen to reflect what atQor stands for:
                 </p>
+                <ul>
+                  <li className=" list-inside marker:text-orange-800 text-gray-700">
+                    <strong className="font-semibold italic text-orange-800">
+                      The Peacock-Themed Box –
+                    </strong>{" "}
+                    A symbol of pride, beauty, and growth. Just as the peacock
+                    radiates vibrance, atQor thrives on diversity and
+                    creativity.
+                  </li>
+                  <li className=" list-inside marker:text-orange-800 text-gray-700">
+                    <strong className="font-semibold italic text-orange-800">
+                      The Brass Bell with Wooden Handle –
+                    </strong>{" "}
+                    Resonating clarity and harmony, reminding us of the rhythm
+                    and unity that drive our success.
+                  </li>
+                  <li className=" list-inside marker:text-orange-800 text-gray-700">
+                    <strong className="font-semibold italic text-orange-800">
+                      The Incense Stick Holder –
+                    </strong>{" "}
+                    Representing calmness and focus, echoing the mindfulness
+                    that shapes our culture.
+                  </li>
+                  <li className=" list-inside marker:text-orange-800 text-gray-700">
+                    <strong className="font-semibold italic text-orange-800">
+                      The Scented Candle –
+                    </strong>{" "}
+                    A beacon of light and warmth, symbolizing hope and
+                    positivity in every endeavor.
+                  </li>
+                  <li className=" list-inside marker:text-orange-800 text-gray-700">
+                    <strong className="font-semibold italic text-orange-800">
+                      Premium Dry Fruits –
+                    </strong>{" "}
+                    Signifying health, energy, and prosperity—the foundation of
+                    a thriving future.
+                  </li>
+                </ul>
 
                 <div className="space-y-4 text-gray-700">
                   <p>
-                    Each hamper is a fusion of cultural richness and modern
-                    elegance, thoughtfully curated to reflect the spirit of the
-                    festival.
+                    Every item is{" "}
+                    <strong className="font-semibold">locally sourced</strong>,
+                    crafted by skilled artisans, and designed with eco-conscious
+                    values—because growth must be sustainable and inclusive.
                   </p>
-                  <p>
+                  {/* <p>
                     From brass bell essentials to scented candles and premium
                     dry fruits, every item tells a story of care, celebration,
                     and Indian craftsmanship.
@@ -290,38 +332,39 @@ const Dashboard = () => {
                   <p>
                     With sustainable packaging and reusable elements, we embrace
                     eco-conscious values while preserving festive charm.
-                  </p>
+                  </p> */}
 
-                  <p className="font-semibold italic text-orange-800 mb-3">
-                    Let this gift be more than a gesture — let it be a heartfelt
-                    experience that lingers long after the festivities.
-                  </p>
-
-                  <p>
-                    Our wellness initiatives this year were just one part of our
-                    dedication to each of you as a valued member of the atQor
-                    family. We know that behind each success is the support and
-                    care of your family, who share in your efforts and
-                    achievements.
+                  <p className="font-semibold italic text-orange-800 mb-0">
+                    A Tribute to Families
                   </p>
 
                   <p>
-                    This Diwali, we thank you and your loved ones for being part
-                    of our journey. May the season bring joy and warmth to all.
+                    Behind every achievement is a family that shares in the
+                    effort, the late nights, and the dreams. Your loved ones are
+                    an inseparable part of atQor’s success story. We thank them
+                    for their patience, encouragement, and pride in what we
+                    build together.
                   </p>
 
-                  <p className="font-semibold italic text-orange-800 mb-3">
+                  <p>
+                    As we look ahead, let us continue to grow with light in our
+                    hearts, clarity in our purpose, and unity in our actions.
+                  </p>
+
+                  {/* <p className="font-semibold italic text-orange-800 mb-3">
                     atQor wali Diwali, unwrap joy in every jar.
-                  </p>
+                  </p> */}
 
                   <p className="text-gray-600 italic">
-                    Thank you for being a part of our journey.
+                    Wishing a very happy and prosperous #atQorWaliDiwali
                   </p>
                 </div>
 
                 {/* ✅ Signature */}
                 <div className=" border-t border-gray-200">
-                  <p className="text-gray-700 mb-4">With gratitude,</p>
+                  <p className="text-gray-700 mb-4">
+                    With gratitude and pride,
+                  </p>
                   <div className="flex items-center gap-4">
                     <img
                       src={ceoImage}
@@ -329,7 +372,7 @@ const Dashboard = () => {
                       className="w-16 h-16 rounded-full border-2 border-orange-200 shadow-lg"
                     />
                     <div>
-                      <div className="font-bold text-gray-800 text-lg">
+                      <div className="font-semibold text-gray-800 text-lg">
                         Pushkaraj Kale
                       </div>
                       <div className="text-gray-600">CEO</div>
@@ -402,7 +445,7 @@ const Dashboard = () => {
             {/* ✅ Feedback Section */}
             <div className="bg-[#FBEEDE]/50 rounded-3xl p-2  mb-8 border-2 border-[#B99C66] relative">
               <div className="p-4">
-                <h2 className="text-xl font-semibold text-slate-800 mb-4">
+                <h2 className="text-xl  text-gray-900 mb-4">
                   {firstName}, share your diwali wishes
                 </h2>
 
