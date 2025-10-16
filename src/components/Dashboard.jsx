@@ -141,7 +141,7 @@ const Dashboard = () => {
         };
         await getData(apiPaths.CREATE_MESSAGE, "POST", payload, token);
         setFeedbackSubmitted(true);
-        toast.success("Feedback submitted successfully!");
+        toast.success("Wishes sent! Thanks for spreading happiness!");
         setTimeout(() => {
           setFeedback("");
           setFeedbackSubmitted(false);
